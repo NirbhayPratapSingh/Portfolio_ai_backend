@@ -8,7 +8,7 @@ const app = express();
 
 // ✅ Allow React frontend to talk to backend
 app.use(cors({
-  origin: "http://localhost:5173",   // your frontend dev server
+  origin: ["http://localhost:5173","https://nirbhayportfolioai.netlify.app"],   // your frontend dev server
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"], // allow content-type
 }));
