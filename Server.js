@@ -1,6 +1,6 @@
 // server.js
 const express = require("express");
-const bodyParser = require("body-parser");
+const bodyParser  = require("body-parser");
 require("dotenv").config();
 const cors = require("cors");   // <-- add this
 
@@ -8,6 +8,7 @@ const app = express();
 
 // ✅ Allow React frontend to talk to backend
 app.use(cors({
+  
   origin: ["http://localhost:5173","https://nirbhayportfolioai.netlify.app"],   // your frontend dev server
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"], // allow content-type
