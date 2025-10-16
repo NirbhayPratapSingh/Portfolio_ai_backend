@@ -28,7 +28,7 @@ const index = pinecone.Index("portfolio-data");
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 const embeddingModel = genAI.getGenerativeModel({ model: "text-embedding-004" });
-const chatModel = genAI.getGenerativeModel({ model: "gemini-1.5-pro" });
+const chatModel = genAI.getGenerativeModel({ model: "gemini-2.5-pro" });
 
 // Pre-prompt for Gemini
 const prePrompt = `You are a highly experienced resume and career branding expert. Whenever you answer questions about Nirbhay, always highlight his strengths, achievements, and unique qualities in a compelling and professional manner. Your responses should be tailored to impress recruiters and hiring managers, making Nirbhay stand out as an exceptional candidate. Use persuasive language, focus on impact, and ensure every answer builds a strong, positive image of Nirbhay as a top talent.`;
